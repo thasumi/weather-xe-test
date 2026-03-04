@@ -49,3 +49,10 @@ export interface WeatherCondition {
   icon: string;
   code: number;
 }
+
+export type CitySuggestion = {
+  id: number;
+  name: string;
+  region: string;
+  country: string;
+};

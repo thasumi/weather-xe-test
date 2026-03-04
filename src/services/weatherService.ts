@@ -1,4 +1,4 @@
-import type { WeatherForecastResponse } from "@/types/weather";
+import type { CitySuggestion, WeatherForecastResponse } from "@/types/weather";
 
 const API_KEY = "17a0ea6d3af24151a23170312240403";
 const BASE_URL = "http://api.weatherapi.com/v1";
@@ -22,3 +22,15 @@ export async function getForecastByCity(
 
   return (await response.json()) as WeatherForecastResponse;
 }
+
+export const searchCities = async (query: string): Promise<CitySuggestion[]> => {
+  const searchTerm = query.trim();
+  if (searchTerm.length < 2) return [];
+
+  const res = await fetch(
+    `${BASE_URL}/search.json?key=${API_KEY}&q=${encodeURIComponent(searchTerm)}`
+  );
+
+  if (!res.ok) throw new Error("Failed to search cities");
+  return res.json();
+};

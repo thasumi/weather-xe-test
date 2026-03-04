@@ -18,14 +18,16 @@ const formatLabel = (index: number, iso: string) => {
 </script>
 
 <template>
-  <section class="space-y-4 mt-[5%]">
-    <div class="flex justify-between">
+  <section class="space-y-4 mt-[5%] mb-[5%]">
+    <div
+      class="flex gap-24 overflow-x-auto md:overflow-visible scrollbar-hide md:justify-between"
+    >
       <div
         v-for="(hour, index) in hours"
         :key="hour.time"
-        class="flex flex-col items-center gap-2"
+        class="flex flex-col items-center gap-2 shrink-0"
       >
-        <span class="text-text-muted text-xs md:text-sm font-medium">
+        <span class="text-text-muted text-xs md:text-md font-medium">
           {{ formatLabel(index, hour.time) }}
         </span>
 
@@ -41,7 +43,7 @@ const formatLabel = (index: number, iso: string) => {
         </div>
 
         <span class="text-text-primary text-xs md:text-sm font-semibold">
-          {{ Math.round(hour.temp_c) }}°C
+          {{ Math.round(hour.temp_c) }} °C
         </span>
       </div>
     </div>

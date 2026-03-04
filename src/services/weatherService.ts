@@ -2,7 +2,7 @@ import { environment } from "@/environment";
 import type { CitySuggestion, WeatherForecastResponse } from "@/types/weather";
 
 const apiKey = environment.apiKey;
-const BASE_URL = "http://api.weatherapi.com/v1";
+const BASE_URL = environment.apiURL;
 
 export async function getForecastByCity(
   city: string,

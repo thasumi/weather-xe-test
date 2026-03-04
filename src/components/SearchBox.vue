@@ -103,16 +103,18 @@ const props = defineProps<{
       <div v-if="loading" class="px-4 py-3 text-sm text-slate-500">Searching...</div>
 
       <button
-        v-for="s in suggestions"
-        :key="s.id"
+        v-for="suggestion in suggestions"
+        :key="suggestion.id"
         type="button"
         class="w-full px-4 py-3 text-left text-sm hover:bg-slate-50"
-        @mousedown.prevent="selectSuggestion(s)"
+        @mousedown.prevent="selectSuggestion(suggestion)"
       >
         <div class="font-medium text-slate-900">
-          {{ s.name }}
+          {{ suggestion.name }}
         </div>
-        <div class="text-xs text-slate-500">{{ s.region }} · {{ s.country }}</div>
+        <div class="text-xs text-slate-500">
+          {{ suggestion.region }} - {{ suggestion.country }}
+        </div>
       </button>
     </div>
   </div>

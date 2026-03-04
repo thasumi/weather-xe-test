@@ -1,6 +1,7 @@
+import { environment } from "@/environment";
 import type { CitySuggestion, WeatherForecastResponse } from "@/types/weather";
 
-const API_KEY = "17a0ea6d3af24151a23170312240403";
+const apiKey = environment.apiKey;
 const BASE_URL = "http://api.weatherapi.com/v1";
 
 export async function getForecastByCity(
@@ -8,7 +9,7 @@ export async function getForecastByCity(
   days = 3
 ): Promise<WeatherForecastResponse> {
   const url = new URL(`${BASE_URL}/forecast.json`);
-  url.searchParams.set("key", API_KEY);
+  url.searchParams.set("key", apiKey);
   url.searchParams.set("q", city);
   url.searchParams.set("days", String(days));
   url.searchParams.set("aqi", "no");
@@ -28,7 +29,7 @@ export const searchCities = async (query: string): Promise<CitySuggestion[]> => 
   if (searchTerm.length < 2) return [];
 
   const res = await fetch(
-    `${BASE_URL}/search.json?key=${API_KEY}&q=${encodeURIComponent(searchTerm)}`
+    `${BASE_URL}/search.json?key=${apiKey}&q=${encodeURIComponent(searchTerm)}`
   );
 
   if (!res.ok) throw new Error("Failed to search cities");

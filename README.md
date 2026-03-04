@@ -3,8 +3,12 @@
 A small weather web application built with **Vue 3** that displays weather forecasts for selected cities using the **WeatherAPI REST API**.
 
 The interface was implemented based on the provided **Figma design**, showing the weather forecast for the next hours and upcoming days.
-<img width="1903" height="786" alt="image" src="https://github.com/user-attachments/assets/7b3495e3-842f-47ca-87fb-77342f071513" />
-<img width="1890" height="841" alt="image" src="https://github.com/user-attachments/assets/64d68bf1-3ae8-425f-98b0-61361ee69bf1" />
+<img width="1915" height="604" alt="image" src="https://github.com/user-attachments/assets/5fbd2093-79a5-4ad6-a54a-9e41755a1bc2" />
+
+<img width="1907" height="931" alt="image" src="https://github.com/user-attachments/assets/ac0695e8-9d81-4937-98b3-f7dd3d40ef97" />
+
+<img width="730" height="977" alt="image" src="https://github.com/user-attachments/assets/6e127c08-764e-42e0-8af2-f57c872c54d0" />
+
 
 
 ## Live Demo
@@ -70,4 +74,6 @@ API
 Documentation:
 - https://www.weatherapi.com/docs/
 
+Mobile version
+- All features were adapted for the mobile version, following the Figma design.
 

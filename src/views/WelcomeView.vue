@@ -46,7 +46,7 @@ const start = () => {
             v-model="name"
             type="text"
             placeholder="e.g. Thais"
-            class="w-full rounded-2xl border border-slate-200 px-5 py-3 text-sm outline-none focus:border-slate-300"
+            class="w-full max-w-[420px] rounded-2xl border border-slate-200 px-5 py-3 text-sm outline-none focus:border-slate-300"
             maxlength="25"
           />
         </div>
@@ -63,7 +63,7 @@ const start = () => {
 
         <button
           type="button"
-          class="w-full rounded-2xl py-3 text-sm font-semibold bg-[#1E90FF] text-white"
+          class="w-full max-w-[420px] rounded-2xl py-3 text-sm font-semibold bg-[#1E90FF] text-white"
           @click="start"
         >
           Continue

@@ -8,7 +8,7 @@ The interface was implemented based on the provided **Figma design**, showing th
 
 
 ## Live Demo
-https://YOUR-VERCEL-OR-NETLIFY-LINK
+https://weather-xe-test-deploy.vercel.app/
 
 ---
 

@@ -12,7 +12,7 @@ The interface was implemented based on the provided **Figma design**, showing th
 
 
 ## Live Demo
-https://weather-xe-test-deploy.vercel.app/
+https://weather-test-indol.vercel.app/welcome
 
 ---
 
